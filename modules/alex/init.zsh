@@ -35,6 +35,7 @@ alias h="cd ~"
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias l="ls -la"
+alias -- -='cd -'
 
 # Apache
 alias restart_apache="sudo apachectl -e info -k restart"

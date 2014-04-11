@@ -34,8 +34,9 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'git' \
   'osx' \
-  'prompt' \
-  'alex'
+  'terminal' \
+  'alex' \
+  'prompt' 
 
 #
 # Editor
@@ -52,7 +53,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
 # GNU Utility
@@ -120,12 +121,12 @@ zstyle ':prezto:module:prompt' theme 'alex'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'cursor' \
-  'root'
+# zstyle ':prezto:module:syntax-highlighting' highlighters \
+#   'main' \
+#   'brackets' \
+#   'pattern' \
+#   'cursor' \
+#   'root'
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
@@ -138,13 +139,13 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
-# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 #
 # Tmux
