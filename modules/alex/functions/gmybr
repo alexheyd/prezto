@@ -1,0 +1,30 @@
+# Shorthand to create new branch names based on a certain format
+# Usage (prefix and suffix are optional):
+# gmybr myFeatureName
+# -> git checkout -b features/gaikai.ah/develop/$(date)/myFeatureName
+# 
+# gmybr myFeatureName hotfix testing
+# -> git checkout -b hotfix/gaikai.ah/testing/$(date)/myFeatureName
+function gmybr(){
+    if [ -z "$1" ]; then
+        echo "Branch feature name required."
+        return
+    fi
+
+    feature_name=$1
+    prefix=$2
+    suffix=$3
+    date=$(date +%Y%m%d)
+
+    if [ -z "$2" ]; then
+        prefix="features"
+    fi
+
+    if [ -z "$3" ]; then
+        suffix="develop"
+    fi
+
+    branch_name="$prefix/gaikai.ah/$suffix/$date/$feature_name"
+
+    git checkout -b $branch_name
+}

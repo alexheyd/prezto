@@ -10,6 +10,8 @@ alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
 alias swfstatic="static --cache 1 --port 9999"
 alias undodebug="grt && git co js/app/AppConfig.js && g co js/app/Components/TLX/details.xml"
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
 
 # Global Aliases
 alias -g L="|less" # Write L after a command to page through the output.

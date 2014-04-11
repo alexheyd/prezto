@@ -1,0 +1,13 @@
+# Shorthand to update current branch
+# Usage (remote is optional):
+# gpl upstream
+# -> git pull upstream $(current_branch)
+function gpl(){
+    repo=$1
+
+    if [ -z "$1" ]; then
+        repo="origin"
+    fi
+
+    git pull $repo $(git-branch-current)
+}
