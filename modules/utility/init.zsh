@@ -56,7 +56,7 @@ alias mv="${aliases[mv]:-mv} -i"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-alias rm="${aliases[rm]:-rm} -i"
+alias rm="${aliases[rm]:-rm}"
 alias type='type -a'
 
 # ls
@@ -165,7 +165,7 @@ alias http-serve='python -m SimpleHTTPServer'
 #
 
 # Makes a directory and changes to it.
-function mkdcd {
+function mkd {
   [[ -n "$1" ]] && mkdir -p "$1" && builtin cd "$1"
 }
 
