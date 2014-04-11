@@ -4,7 +4,7 @@ _prompt_alex_pwd="\
 
 %{%F{cyan}%}%n@%m%{%f%} \
 
-%F{yellow}%~%f"
+%F{red}%~%f"
 }
 
 function prompt_alex_precmd {
