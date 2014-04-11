@@ -27,11 +27,9 @@ zstyle ':prezto:load' pmodule \
   'sublime' \
   'environment' \
   'terminal' \
-  'editor' \
   'history' \
   'history-substring-search' \
   'directory' \
-  'spectrum' \
   'utility' \
   'completion' \
   'git' \
