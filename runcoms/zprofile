@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='subl'
+export VISUAL='subl'
 export PAGER='less'
 
 #
@@ -45,6 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   $path
+  ~/bin
 )
 
 #
