@@ -28,7 +28,6 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'history' \
-  'history-substring-search' \
   'directory' \
   'utility' \
   'completion' \
