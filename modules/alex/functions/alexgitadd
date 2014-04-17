@@ -1,28 +1,27 @@
 # Configuration
 # Replace SSH_USERNAME, SSH_HOST, SSH_GIT_PATH with your details
-USER=nycreal
-HOST=alexheyd.com
-GIT_PATH=/home/nycreal/git
 
 # Add local git repo to personal Dreamhost server
-function alexgitadd() {
 
-    echo "--------------------------------------------------"
-    echo "------ Creating New Remote Git Repository --------"
-    echo "--------------------------------------------------"
+local USER=nycreal
+local HOST=alexheyd.com
+local GIT_PATH=/home/nycreal/git
 
-    # Setup remote repo
+echo "--------------------------------------------------"
+echo "------ Creating New Remote Git Repository --------"
+echo "--------------------------------------------------"
 
-    echo "--"
-    echo "-- Creating bare remote repo at:"
-    echo "-- $USER@$HOST/$GIT_PATH/$REPO"
-    echo "--"
+# Setup remote repo
 
-    ssh $USER@$HOST 'mkdir '$GIT_PATH'/'$REPO' && cd '$GIT_PATH'/'$REPO' && git --bare init && git --bare update-server-info && cp hooks/post-update.sample hooks/post-update && chmod a+x hooks/post-update && touch git-daemon-export-ok' 
+echo "--"
+echo "-- Creating bare remote repo at:"
+echo "-- $USER@$HOST/$GIT_PATH/$REPO"
+echo "--"
 
-    git remote add alex $GIT_REMOTE_URL
+ssh $USER@$HOST 'mkdir '$GIT_PATH'/'$REPO' && cd '$GIT_PATH'/'$REPO' && git --bare init && git --bare update-server-info && cp hooks/post-update.sample hooks/post-update && chmod a+x hooks/post-update && touch git-daemon-export-ok' 
 
-    git add .
-    git commit -m 'initial commit'
-    git push --all $GIT_REMOTE_URL
-}
+git remote add alex $GIT_REMOTE_URL
+
+git add .
+git commit -m 'initial commit'
+git push --all $GIT_REMOTE_URL

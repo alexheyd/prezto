@@ -1,13 +1,13 @@
 # Shorthand to push current branch
+
 # Usage (remote is optional):
-# gps upstream
+# $ gps upstream
 # -> git push upstream $(current_branch)
-function gps(){
-    repo=$1
 
-    if [ -z "$1" ]; then
-        repo="origin"
-    fi
+local repo=$1
 
-    git push $repo $(git-branch-current)
-}
+if [ -z "$1" ]; then
+    repo="origin"
+fi
+
+git push $repo $(git-branch-current)

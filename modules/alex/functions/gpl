@@ -2,12 +2,11 @@
 # Usage (remote is optional):
 # gpl upstream
 # -> git pull upstream $(current_branch)
-function gpl(){
-    repo=$1
 
-    if [ -z "$1" ]; then
-        repo="origin"
-    fi
+local repo=$1
 
-    git pull $repo $(git-branch-current)
-}
+if [ -z "$1" ]; then
+    repo="origin"
+fi
+
+git pull $repo $(git-branch-current)
