@@ -1,47 +1,46 @@
-home_dir=${ZDOTDIR:-$HOME}
-prezto_dir="$home_dir/.zprezto"
+# chsh -s /bin/zsh
 
-hash zsh 2>/dev/null || { 
-  echo "Zsh, isn't installed on your system, you're going to need to install that first."
-  exit 1
-}
-
-if [ -d $prezto_dir ]
+if [ -d ~/.zprezto ]
 then
-  echo "Prezto already installed, exiting installation."
+  echo "\033[0;33mYou already have prezto installed.\033[0m Upgrading..."
+  cd ~/.zprezto
+  /usr/bin/env git add .
+  /usr/bin/env git commit -a -m["Commit changes before upgrade"]
+  /usr/bin/env git pull
   exit
 fi
 
-echo ""
-echo "Git cloning Prezto into $prezto_dir"
-hash git 2>/dev/null && /usr/bin/env git clone --recursive https://github.com/alexheyd/prezto.git $prezto_dir || {
-  echo "git not installed"
-  exit 1
+zsh
+
+echo "\033[0;34mCloning prezto...\033[0m"
+hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/alexheyd/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" || {
+  echo "\033[0;31mFailed : Git is not installed\033[0m"
+  os=`uname`
+  if [[ "$os" == 'Linux' ]]; then
+    url='http://git-scm.com/download/linux'
+  elif [[ "$os" == 'Darwin' ]]; then
+    url='http://brew.sh/'
+  else
+    url='http://git-scm.com/'
+  fi
+
+  echo " ➥ You should really take a look at $url"
+  exit
 }
 
-echo ""
+if [ -f ~/.zshrc ] || [ -h ~/.zshrc ]
+then
+  echo "\033[0;33mFound ~/.zshrc.\033[0m \033[0;32mBacking up to ~/.zshrc.old\033[0m";
+  mv ~/.zshrc ~/.zshrc.old;
+fi
+
 setopt EXTENDED_GLOB
-for rcfile in "$home_dir"/.zprezto/runcoms/^README.md(.N); do
-  dest="$home_dir/.${rcfile:t}"
-  if [ -f $dest ] || [ -h $dest ]
-  then
-    backup="$dest.prezto_backup"
-    echo "Backing up $dest to $backup"
-    mv $dest $backup
-  fi
-  echo "Linking $rcfile to $dest"
-  ln -s $rcfile $dest
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
-echo ""
-echo "Copying your current PATH and adding it to the end of ~/.zshrc"
-echo "export PATH=$PATH" >> ~/.zshrc
+echo "\033[0;34mSet zsh as your default shell\033[0m"
+chsh -s `which zsh`
 
-
-echo ""
-echo "You can ensure $USER's default shell is set to zsh with 'chsh -s \`which zsh\`'"
-
-echo ""
-echo "Prezto is now installed. Login into, or reload zsh to activate."
-
-echo ""
+echo "\n\n \033[0;32mPrezto is ready\033[0m"
+source ~/.zshrc

@@ -3,6 +3,7 @@ alias src="source ~/.zshrc"
 alias ealias="subl ~/.zprezto/modules/alex/alias.zsh"
 alias ecfg="subl ~/.zpreztorc"
 alias eprezto="subl ~/.zprezto"
+alias uprezto="cd ~/.zprezto && git pull up master && git submodule update --init --recursive"
 alias zp="cd ~/.zprezto"
 
 # (Gaikai Specific) open Google Chrome with Web Security Disabled
