@@ -1,0 +1,20 @@
+# Shorthand to create new branch names based on a certain format
+
+# Usage (prefix and suffix are optional):
+# $ gmybr myFeatureName
+# -> git checkout -b features/gaikai.ah/develop/$(date)/myFeatureName
+# 
+# $ gmybr myFeatureName hotfix testing
+# -> git checkout -b hotfix/gaikai.ah/testing/$(date)/myFeatureName
+
+
+if [ -z "$1" ]; then
+    echo "Error: Blog post title required."
+    return
+fi
+
+local title=$1
+local date=$(date +%Y-%m-%d)
+local filename="$date-$title.md"
+
+cat "${ZDOTDIR:-$HOME}/.zprezto/modules/alex/templates/newpost.md" > $filename

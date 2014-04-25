@@ -8,3 +8,5 @@
 export EDITOR="subl"
 
 source "${0:h}/alias.zsh"
+
+source "/Users/alex/.rvm/scripts/rvm"
