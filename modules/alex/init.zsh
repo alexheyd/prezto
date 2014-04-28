@@ -9,4 +9,6 @@ export EDITOR="subl"
 
 source "${0:h}/alias.zsh"
 
-source "/Users/alex/.rvm/scripts/rvm"
+if [[ -s "/Users/alex/.rvm/scripts/rvm" ]]; then
+  source "/Users/alex/.rvm/scripts/rvm"
+fi
