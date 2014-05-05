@@ -91,7 +91,7 @@ alias gfo="git fetch origin"
 alias cbr="git-branch-current"
 alias unstage="git reset"
 alias undoall="git reset --hard"
-alias rollback="git reset --soft 'HEAD^'"
+alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
