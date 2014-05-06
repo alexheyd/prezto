@@ -1,7 +1,7 @@
 # Shorthand to update current branch
 # Usage (remote is optional):
 # gpl upstream
-# -> git pull upstream $(current_branch)
+# -> git pull upstream $(git-branch-current)
 
 local repo=$1
 

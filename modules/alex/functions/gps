@@ -2,7 +2,7 @@
 
 # Usage (remote is optional):
 # $ gps upstream
-# -> git push upstream $(current_branch)
+# -> git push upstream $(git-branch-current)
 
 local repo=$1
 
