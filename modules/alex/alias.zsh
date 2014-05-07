@@ -1,6 +1,7 @@
 ###############################################################################
 # Prezto
 ###############################################################################
+
 alias src="source ~/.zshrc"
 alias ealias="subl ~/.zprezto/modules/alex/alias.zsh"
 alias ecfg="subl ~/.zpreztorc"
@@ -11,6 +12,7 @@ alias zp="cd ~/.zprezto"
 ###############################################################################
 # (Gaikai Specific) open Google Chrome with Web Security Disabled
 ###############################################################################
+
 alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
 alias swfstatic="static --cache 1 --port 9999"
@@ -24,12 +26,14 @@ alias umountvm="umount -f /Volumes/GitHub"
 ###############################################################################
 # Utilities
 ###############################################################################
+
 alias -- -='cd -'
 alias extract="unarchive"
 
 ###############################################################################
 # Apache
 ###############################################################################
+
 alias restart_apache="sudo apachectl -e info -k restart"
 alias start_apache="sudo apachectl start"
 alias stop_apache="sudo apachectl stop"
@@ -40,6 +44,7 @@ alias eapache="subl /etc/apache2/httpd.conf"
 ###############################################################################
 # System
 ###############################################################################
+
 alias rmdir="rm -rf"
 alias o="open"
 alias oo="open ."
@@ -79,18 +84,12 @@ done
 ###############################################################################
 # Git
 ###############################################################################
+
 # alias g="git"
 alias gst="git status -sb"
-# alias gss="git status -s"
-# alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-# alias gc="git commit -m"
-# alias gca="git commit -a -m"
-# alias ga="git add"
 alias gaa="git add . -A"
 alias gfu="git fetch upstream"
 alias gfo="git fetch origin"
-# alias grmbr="git branch -D"
-# alias gbr="git co -b"
 alias cbr="git-branch-current"
 alias unstage="git reset"
 alias undoall="git reset --hard"
