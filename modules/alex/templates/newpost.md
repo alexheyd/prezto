@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Post Title"
-date:   2014-04-22 15:35:22
+title:  "%TITLE%"
+date:   %DATE% %TIMESTAMP%
 categories: blog
 comments: true
 ---
