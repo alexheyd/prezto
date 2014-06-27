@@ -15,7 +15,7 @@ alias zp="cd ~/.zprezto"
 
 alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
-alias swfstatic="static --cache 1 --port 9999"
+alias swfstatic="static --cache 1 --port 8080"
 alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
@@ -29,6 +29,11 @@ alias umountvm="umount -f /Volumes/GitHub"
 
 alias -- -='cd -'
 alias extract="unarchive"
+
+# dotjs-universal export/import
+dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.5.1_0/"
+alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -r $dotjsPath/styles ~/Dropbox/sync/dotjs/"
+alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r ~/Dropbox/sync/dotjs/styles $dotjsPath"
 
 ###############################################################################
 # Apache
