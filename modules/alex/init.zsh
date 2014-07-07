@@ -1,3 +1,5 @@
+export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/" # Add RVM to PATH for scripting
+
 # load zmv module for batch file renaming
 # autoload zmv
 
@@ -5,7 +7,7 @@
 # source ~/Projects/z/z.sh
 
 # Exports
-export EDITOR="subl"
+export EDITOR="atom"
 
 source "${0:h}/alias.zsh"
 
