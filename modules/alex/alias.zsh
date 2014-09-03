@@ -1,4 +1,12 @@
 ###############################################################################
+# Cheatsheet of aliases from loaded modules
+###############################################################################
+# cdf = cd to folder shown in Finder
+# mkd = mkdir and cd to it
+# cdl = cd to dir and ls -la
+# d = lists dir previously cd'd to
+
+###############################################################################
 # Prezto
 ###############################################################################
 alias src="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
@@ -55,7 +63,7 @@ alias o="open"
 alias oo="open ."
 alias etrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 alias clr="clear"
-alias l="ls -la"
+# alias l="ls -la"
 # Toggle hidden files
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
