@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/modules/alex/alias.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/modules/alex/alias.zsh"
+fi

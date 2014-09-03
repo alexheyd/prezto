@@ -1,8 +1,7 @@
 ###############################################################################
 # Prezto
 ###############################################################################
-
-alias src="source ~/.zshrc"
+alias src="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias ealias="subl ~/.zprezto/modules/alex/alias.zsh"
 alias ecfg="subl ~/.zpreztorc"
 alias eprezto="subl ~/.zprezto"
@@ -20,7 +19,7 @@ alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
 # Mount/unmount specific VM folder
-alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@alex-pc/GitHub /Volumes/GitHub && subl /Volumes/GitHub"
+alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && subl /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
 
 ###############################################################################
@@ -29,6 +28,7 @@ alias umountvm="umount -f /Volumes/GitHub"
 
 alias -- -='cd -'
 alias extract="unarchive"
+alias cdusb="cd /Volumes/ADATA\ UFD && l"
 
 # dotjs-universal export/import
 dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.5.1_0/"
@@ -100,5 +100,6 @@ alias unstage="git reset"
 alias undoall="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
+alias undorebase="git reset --hard ORIG_HEAD"
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
