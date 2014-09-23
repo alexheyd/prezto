@@ -12,5 +12,6 @@ if [ -z "$2" ]; then
     remote_name="up"
 fi
 
+echo "Removing $branch_name from local and remote repo: '$remote_name'..."
 git branch -D $branch_name
 git push $remote_name --delete $branch_name

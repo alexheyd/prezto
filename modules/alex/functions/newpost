@@ -1,12 +1,4 @@
-# Shorthand to create new branch names based on a certain format
-
-# Usage (prefix and suffix are optional):
-# $ gmybr myFeatureName
-# -> git checkout -b features/gaikai.ah/develop/$(date)/myFeatureName
-# 
-# $ gmybr myFeatureName hotfix testing
-# -> git checkout -b hotfix/gaikai.ah/testing/$(date)/myFeatureName
-
+# Alias for creating Jekyll blog posts
 
 if [ -z "$1" ]; then
     echo "Error: Blog post title required."
