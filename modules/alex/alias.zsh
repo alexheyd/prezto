@@ -22,7 +22,7 @@ alias zp="cd ~/.zprezto"
 
 alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
-alias swfstatic="static --cache 1 --port 8080"
+# alias swfstatic="static --cache 1 --port 8080"
 alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
