@@ -9,6 +9,10 @@ export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/:$HOME/.nvm" 
 # Exports
 export EDITOR="atom"
 
+# https://github.com/LastPass/lastpass-cli#installing-on-os-x
+# needs lastpass-cli for Alfred Workflow
+export LPASS_AGENT_TIMEOUT=0
+
 source "${0:h}/alias.zsh"
 
 source ~/.nvm/nvm.sh
