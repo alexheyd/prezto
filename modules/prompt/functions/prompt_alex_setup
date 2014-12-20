@@ -1,70 +1,64 @@
-NEWLINE=$'\n'
+# Inspired by damoekri theme
+
+pmodload 'helper'
 
 function prompt_alex_pwd {
-_prompt_alex_pwd="\
+  # local pwd="${PWD/#$HOME/~}"
+
+  _prompt_alex_pwd="\
 
 %{%F{cyan}%}%n@%m%{%f%} %F{red}%~%f"
 }
 
 function prompt_alex_precmd {
-    setopt LOCAL_OPTIONS
-    unsetopt XTRACE KSH_ARRAYS
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
 
-    prompt_alex_pwd
+  # Format PWD.
+  prompt_alex_pwd
 
-    # Get Git repository information.
-    if (( $+functions[git-info] )); then
-        git-info
+  # Get Git repository information.
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
 
-        # default new line between name/pwd and prompt char
-        git_branch="${NEWLINE}"
-
-        # grab git branch
-        branch_name="${git_info:+${(e)git_info[prompt]}}% ${git_info[rprompt]}"
-
-        # grab git branch length
-        len=${#branch_name}
-
-        # apparently when no git branch is found, length is still 2
-        if [ $len -gt 2 ]; then
-            git_branch="${NEWLINE}$branch_name${NEWLINE}"
-        fi
-    fi
+  # Get Ruby version information.
+  if (( $+functions[ruby-info] )); then
+    ruby-info
+  fi
 }
 
 function prompt_alex_setup {
-    setopt LOCAL_OPTIONS
-    unsetopt XTRACE KSH_ARRAYS
-    prompt_opts=(cr percent subst)
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
 
-    # Load required functions.
-    autoload -Uz add-zsh-hook
-    autoload -Uz vcs_info
+  # Load required functions.
+  autoload -Uz add-zsh-hook
 
-    # Add hook for calling vcs_info before each command.
-    add-zsh-hook precmd prompt_alex_precmd
+  # Add hook for calling git-info and ruby-info before each command.
+  add-zsh-hook precmd prompt_alex_precmd
 
-    # Set git-info parameters.
-    zstyle ':prezto:module:git:info' verbose 'yes'
-    zstyle ':prezto:module:git:info:action' format '%%B%F{yellow}%s%f%%b'
-    zstyle ':prezto:module:git:info:added' format ' %%B%F{green}✚%f%%b'
-    zstyle ':prezto:module:git:info:ahead' format ' %%B%F{yellow}⬆%f%%b'
-    zstyle ':prezto:module:git:info:behind' format ' %%B%F{yellow}⬇%f%%b'
-    zstyle ':prezto:module:git:info:branch' format '%F{green}%b%f'
-    zstyle ':prezto:module:git:info:commit' format '%F{green}%.7c%f'
-    zstyle ':prezto:module:git:info:deleted' format ' %%B%F{red}✖%f%%b'
-    zstyle ':prezto:module:git:info:modified' format ' %%B%F{red}✱%f%%b'
-    zstyle ':prezto:module:git:info:position' format '%F{red}%p%f'
-    zstyle ':prezto:module:git:info:renamed' format ' %%B%F{red}➜%f%%b'
-    zstyle ':prezto:module:git:info:stashed' format ' %%B%F{cyan}✭%f%%b'
-    zstyle ':prezto:module:git:info:unmerged' format ' %%B%F{yellow}═%f%%b'
-    zstyle ':prezto:module:git:info:untracked' format ' %%B%F{white}◼%f%%b'
-    zstyle ':prezto:module:git:info:keys' format \
-        'prompt' '%f$(coalesce "%b" "%p" "%c")%s' \
-        'rprompt' '%A%B%S%a%d%m%r%U%u'
+  # Set editor-info parameters.
+  zstyle ':prezto:module:editor:info:keymap:primary' format ' %F{green}»%f'
 
-    PROMPT='%F{cyan}${_prompt_alex_pwd}%f$git_branch${_prompt_alex_colors[5]}%(!.#.»)%{%f%} '
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:action' format ':%F{magenta}%s%f'
+  zstyle ':prezto:module:git:info:branch' format '%F{blue}%b%f'
+  zstyle ':prezto:module:git:info:clean' format ' %F{green}✔%f'
+  zstyle ':prezto:module:git:info:dirty' format ' %F{red}✗%f'
+  zstyle ':prezto:module:git:info:commit' format '%F{blue}%.7c%f'
+  zstyle ':prezto:module:git:info:position' format '%F{blue}%p%f'
+  zstyle ':prezto:module:git:info:keys' format \
+    'rprompt' ' $(coalesce "%b" "%p" "%c")%s%C%D'
+
+  # Set ruby-info parameters.
+  zstyle ':prezto:module:ruby:info:version' format ' %F{yellow}%v%f'
+
+  # Define prompts.
+  PROMPT='%F{cyan}${_prompt_alex_pwd}%f${editor_info[keymap]} '
+  RPROMPT='${git_info:+${(e)git_info[rprompt]}}'
 }
 
 prompt_alex_setup "$@"
-
