@@ -37,7 +37,7 @@ alias umountvm="umount -f /Volumes/GitHub"
 alias -- -='cd -'
 alias extract="unarchive"
 alias cdusb="cd /Volumes/ADATA\ UFD && l"
-
+alias lplogin="/usr/local/bin/lpass login"
 # dotjs-universal export/import
 dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.5.1_0/"
 alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -r $dotjsPath/styles ~/Dropbox/sync/dotjs/"

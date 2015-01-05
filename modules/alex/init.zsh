@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/:$HOME/.nvm" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin:/usr/local/share/python:/usr/bin/:$HOME/.nvm:$HOME/.nvm/v0.10.33/bin" # Add RVM to PATH for scripting
 
 # load zmv module for batch file renaming
 # autoload zmv
