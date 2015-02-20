@@ -12,23 +12,26 @@
 alias src="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 alias ealias="subl ~/.zprezto/modules/alex/alias.zsh"
 alias ecfg="subl ~/.zpreztorc"
-alias eprezto="subl ~/.zprezto"
+alias ep="subl ~/.zprezto"
 alias uprezto="cd ~/.zprezto && git pull up master && git submodule update --init --recursive"
 alias zp="cd ~/.zprezto"
 
 ###############################################################################
-# (Gaikai Specific) open Google Chrome with Web Security Disabled
+# (Gaikai Specific)
 ###############################################################################
 
+# Open Google Chrome with Web Security Disabled
 alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
-# alias swfstatic="static --cache 1 --port 8080"
 alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
 # Mount/unmount specific VM folder
 alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && subl /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
+# Update node_modules and bower_components
+alias updatemods="rmdir node_modules && rmdir bower_components && bower cache clean && npm cache clean && npm install && bower install"
+
 
 ###############################################################################
 # Utilities
@@ -39,7 +42,7 @@ alias extract="unarchive"
 alias cdusb="cd /Volumes/ADATA\ UFD && l"
 alias lplogin="/usr/local/bin/lpass login"
 # dotjs-universal export/import
-dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.5.1_0/"
+dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.6.1_0"
 alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -r $dotjsPath/styles ~/Dropbox/sync/dotjs/"
 alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r ~/Dropbox/sync/dotjs/styles $dotjsPath"
 
@@ -103,6 +106,7 @@ alias gst="git status -sb"
 alias gaa="git add . -A"
 alias gfu="git fetch upstream"
 alias gfo="git fetch origin"
+alias gsc="git stash clear"
 alias cbr="git-branch-current"
 alias unstage="git reset"
 alias undoall="git reset --hard"

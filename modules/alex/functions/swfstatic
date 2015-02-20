@@ -1,5 +1,5 @@
 # Alias for node-static
-# 
+#
 # Example (IP is optional):
 # $ swfstatic [IP_ADDRESS]
 
@@ -11,7 +11,7 @@ if [ -z "$1" ]; then
 fi
 
 if [ -z "$2" ]; then
-    ip="10.128.1.57"
+    ip="10.128.1.61"
 fi
 
 static -c 1 -p $port -a $ip
