@@ -7,6 +7,18 @@
 # d = lists dir previously cd'd to
 
 ###############################################################################
+# Suffix Aliases
+###############################################################################
+alias -s js=subl
+alias -s txt=subl
+alias -s json=subl
+alias -s sh=subl
+alias -s html=subl
+alias -s mdown=subl
+alias -s log=subl
+alias -s hbs=subl
+
+###############################################################################
 # Prezto
 ###############################################################################
 alias src="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
