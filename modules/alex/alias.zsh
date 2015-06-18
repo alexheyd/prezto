@@ -34,6 +34,7 @@ alias zp="cd ~/.zprezto"
 
 # Open Google Chrome with Web Security Disabled
 alias chr="open /Applications/Google\ Chrome.app --args --disable-web-security"
+alias chr2="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=/Users/alex/Library/Application\ Support/Google/Chrome/Apollo --disable-web-security --allow-file-access-from-files > /dev/null 2>&1 &"
 alias canary="open /Applications/Google\ Chrome\ Canary.app --args --disable-web-security"
 alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
@@ -42,7 +43,7 @@ alias gk="cd ~/Sites/gaikai.com"
 alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && subl /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
 # Update node_modules and bower_components
-alias updatemods="rmdir node_modules && rmdir bower_components && bower cache clean && npm cache clean && npm install && bower install"
+alias updatemods="rm -rf node_modules && rm -rf bower_components && bower cache clean && npm cache clean && npm install && bower install"
 
 
 ###############################################################################
