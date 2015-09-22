@@ -9,22 +9,23 @@
 ###############################################################################
 # Suffix Aliases
 ###############################################################################
-alias -s js=subl
-alias -s txt=subl
-alias -s json=subl
-alias -s sh=subl
-alias -s html=subl
-alias -s mdown=subl
-alias -s log=subl
-alias -s hbs=subl
+alias -s js=atom
+alias -s txt=atom
+alias -s json=atom
+alias -s sh=atom
+alias -s html=atom
+alias -s mdown=atom
+alias -s log=atom
+alias -s hbs=atom
+
 
 ###############################################################################
 # Prezto
 ###############################################################################
-alias src="source ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-alias ealias="subl ~/.zprezto/modules/alex/alias.zsh"
-alias ecfg="subl ~/.zpreztorc"
-alias ep="subl ~/.zprezto"
+alias src="exec zsh"
+alias ealias="atom ~/.zprezto/modules/alex/alias.zsh"
+alias ecfg="atom ~/.zpreztorc"
+alias ep="atom ~/.zprezto"
 alias uprezto="cd ~/.zprezto && git pull up master && git submodule update --init --recursive"
 alias zp="cd ~/.zprezto"
 
@@ -40,11 +41,16 @@ alias sf="cd ~/Sites/swordfish"
 alias sfgk="cd ~/Sites/swordfish/js/lib/gaikai"
 alias gk="cd ~/Sites/gaikai.com"
 # Mount/unmount specific VM folder
-alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && subl /Volumes/GitHub"
+alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && atom /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
 # Update node_modules and bower_components
-alias updatemods="rm -rf node_modules && rm -rf bower_components && bower cache clean && npm cache clean && npm install && bower install"
+alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && sudo npm cache clean && sudo npm i && bower i"
+alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
 
+###############################################################################
+# Prezto
+###############################################################################
+alias ai="apm install"
 
 ###############################################################################
 # Utilities
@@ -66,9 +72,9 @@ alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r
 alias restart_apache="sudo apachectl -e info -k restart"
 alias start_apache="sudo apachectl start"
 alias stop_apache="sudo apachectl stop"
-alias ehosts="subl /etc/hosts"
-alias evhosts="subl /private/etc/apache2/extra/httpd-vhosts.conf"
-alias eapache="subl /etc/apache2/httpd.conf"
+alias ehosts="atom /etc/hosts"
+alias evhosts="atom /private/etc/apache2/extra/httpd-vhosts.conf"
+alias eapache="atom /etc/apache2/httpd.conf"
 
 ###############################################################################
 # System
