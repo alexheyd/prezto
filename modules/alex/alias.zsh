@@ -134,6 +134,8 @@ alias undoall="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
+
+# need single quotes on aliases below to prevent git error in not git directories on shell startup
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 alias gignore='git update-index --assume-unchanged'
