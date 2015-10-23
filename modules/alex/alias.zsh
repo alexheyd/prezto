@@ -64,6 +64,7 @@ alias lplogin="/usr/local/bin/lpass login"
 dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjfadhifkmdoalniglnmmpjggnfbam/1.6.1_0"
 alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -r $dotjsPath/styles ~/Dropbox/sync/dotjs/"
 alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r ~/Dropbox/sync/dotjs/styles $dotjsPath"
+alias maxfiles="ulimit -n 1024"
 
 ###############################################################################
 # Apache
@@ -121,6 +122,7 @@ done
 ###############################################################################
 
 # alias g="git"
+alias gl="git log --color --graph --pretty=format:'%Cred%h %Cgreen(%cr) %Cblue<%an>%C(yellow)%d%n%s%n'"
 alias gst="git status -sb"
 alias gaa="git add . -A"
 alias gfu="git fetch upstream"
