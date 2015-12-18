@@ -44,7 +44,7 @@ alias gk="cd ~/Sites/gaikai.com"
 alias mountvm="mkdir /Volumes/GitHub && mount_smbfs //alex@aheyd-pc/GitHub /Volumes/GitHub && atom /Volumes/GitHub"
 alias umountvm="umount -f /Volumes/GitHub"
 # Update node_modules and bower_components
-alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && sudo npm cache clean && sudo npm i && bower i"
+alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && npm cache clean && npm i && bower i"
 alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
 
 ###############################################################################
