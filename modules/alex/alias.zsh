@@ -65,6 +65,7 @@ dotjsPath="~/Library/Application\ Support/Google/Chrome/Default/Extensions/mnnjf
 alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -r $dotjsPath/styles ~/Dropbox/sync/dotjs/"
 alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r ~/Dropbox/sync/dotjs/styles $dotjsPath"
 alias maxfiles="ulimit -n 1024"
+alias flix="peerflix --vlc"
 
 ###############################################################################
 # Apache
