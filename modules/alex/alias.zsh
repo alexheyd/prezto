@@ -48,7 +48,7 @@ alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache cle
 alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
 
 ###############################################################################
-# Prezto
+# Atom
 ###############################################################################
 alias ai="apm install"
 
@@ -66,6 +66,7 @@ alias edotjs="yes | cp -r $dotjsPath/scripts ~/Dropbox/sync/dotjs/ && yes | cp -
 alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r ~/Dropbox/sync/dotjs/styles $dotjsPath"
 alias maxfiles="ulimit -n 1024"
 alias flix="peerflix --vlc"
+alias cast="peercast"
 
 ###############################################################################
 # Apache
