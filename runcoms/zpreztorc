@@ -136,6 +136,7 @@ zstyle ':prezto:module:prompt' theme 'alex'
 #   'main' \
 #   'brackets' \
 #   'pattern' \
+#   'line' \
 #   'cursor' \
 #   'root'
 
