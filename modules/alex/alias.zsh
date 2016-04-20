@@ -72,7 +72,7 @@ alias cast="peercast"
 # Apache
 ###############################################################################
 
-alias restart_apache="sudo apachectl -e info -k restart"
+alias restart_apache="sudo apachectl restart"
 alias start_apache="sudo apachectl start"
 alias stop_apache="sudo apachectl stop"
 alias ehosts="atom /etc/hosts"
@@ -83,6 +83,7 @@ alias eapache="atom /etc/apache2/httpd.conf"
 # System
 ###############################################################################
 
+alias serve="python -m SimpleHTTPServer"
 alias rmdir="rm -rf"
 alias o="open"
 alias oo="open ."
