@@ -46,6 +46,7 @@ alias umountvm="umount -f /Volumes/GitHub"
 # Update node_modules and bower_components
 alias ugh="sudo rm -rf node_modules bower_components dist tmp && bower cache clean && npm cache clean && npm i && bower i"
 alias gprd="gco develop && gpl && gco - && git pull --rebase origin develop"
+alias olang="atom public/assets/i18n/en-us.json"
 
 ###############################################################################
 # Atom
@@ -137,6 +138,7 @@ alias undoall="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
+alias gpfo="gpf origin $(cbr)"
 
 # need single quotes on aliases below to prevent git error in not git directories on shell startup
 # git root
