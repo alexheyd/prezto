@@ -52,6 +52,7 @@ alias olang="atom public/assets/i18n/en-us.json"
 # Atom
 ###############################################################################
 alias ai="apm install"
+alias aui="apm uninstall"
 
 ###############################################################################
 # Utilities
@@ -138,10 +139,20 @@ alias undoall="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
-alias gpfo="gpf origin $(cbr)"
 
 # need single quotes on aliases below to prevent git error in not git directories on shell startup
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
+
+
+###############################################################################
+# Ember
+###############################################################################
+alias egc="ember g component"
+alias egs="ember g service"
+alias egr="ember g route"
+alias edc="ember d component"
+alias eds="ember d service"
+alias edr="ember d route"
