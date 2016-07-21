@@ -128,6 +128,8 @@ done
 
 # alias g="git"
 alias gl="git log --color --graph --pretty=format:'%Cred%h %Cgreen(%cr) %Cblue<%an>%C(yellow)%d%n%s%n'"
+alias gbls="git branch --list"
+alias gbo="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 alias gst="git status -sb"
 alias gaa="git add . -A"
 alias gfu="git fetch upstream"
