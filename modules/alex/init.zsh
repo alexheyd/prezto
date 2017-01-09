@@ -17,7 +17,7 @@ source "${0:h}/alias.zsh"
 
 source ~/.nvm/nvm.sh
 
-nvm use 4.0
+nvm use 6.8
 
 if [[ -s "/Users/alex/.rvm/scripts/rvm" ]]; then
   source "/Users/alex/.rvm/scripts/rvm"

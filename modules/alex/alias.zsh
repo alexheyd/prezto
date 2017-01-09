@@ -129,6 +129,7 @@ done
 # alias g="git"
 alias gl="git log --color --graph --pretty=format:'%Cred%h %Cgreen(%cr) %Cblue<%an>%C(yellow)%d%n%s%n'"
 alias gbls="git branch --list"
+# list git branches sorted by date
 alias gbo="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
 alias gst="git status -sb"
 alias gaa="git add . -A"
@@ -141,6 +142,8 @@ alias undoall="git reset --hard"
 alias undo1="git reset --soft 'HEAD^'"
 alias undopush="git push -f origin HEAD^:master"
 alias undorebase="git reset --hard ORIG_HEAD"
+alias gdf="git diff"
+alias gprom="git pull --rebase origin master"
 
 # need single quotes on aliases below to prevent git error in not git directories on shell startup
 # git root
