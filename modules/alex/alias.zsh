@@ -161,3 +161,8 @@ alias egr="ember g route"
 alias edc="ember d component"
 alias eds="ember d service"
 alias edr="ember d route"
+
+###############################################################################
+# alexheyd.github.io
+###############################################################################
+alias deploy_gh="ember github-pages:commit --branch master --message \"GitHub Pages update.\""
