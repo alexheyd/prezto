@@ -69,7 +69,7 @@ alias idotjs="yes | cp -r ~/Dropbox/sync/dotjs/scripts $dotjsPath && yes | cp -r
 alias maxfiles="ulimit -n 1024"
 alias flix="peerflix --vlc"
 alias cast="peercast"
-
+alias copyrsa="pbcopy < ~/.ssh/id_rsa.pub"
 ###############################################################################
 # Apache
 ###############################################################################
@@ -92,6 +92,7 @@ alias oo="open ."
 alias etrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 alias clr="clear"
 alias l="ls -la"
+alias ld="ls -lad"
 # Toggle hidden files
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
